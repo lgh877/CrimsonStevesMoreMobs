@@ -1,0 +1,48 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:CrudeRedstoneGolem"
+      },
+      {
+        "value": "CUSTOM:PhantomTamer"
+      },
+      {
+        "value": "CUSTOM:CrudeRedstoneMonstrosity"
+      },
+      {
+        "value": "CUSTOM:CyborgVindicator"
+      },
+      {
+        "value": "CUSTOM:ExplosivePhantom"
+      },
+      {
+        "value": "CUSTOM:GiantIllager"
+      },
+      {
+        "value": "CUSTOM:MinionRedstoneGolem"
+      },
+      {
+        "value": "CUSTOM:RedstoneMonstrosity"
+      },
+      {
+        "value": "CUSTOM:TRabus"
+      },
+      {
+        "value": "CUSTOM:TamedPhantom"
+      },
+      {
+        "value": "CUSTOM:VehiclePhantom"
+      }
+    ],
+    "biomes": [],
+    "name": "raiders",
+    "namespace": "minecraft"
+  }
+}

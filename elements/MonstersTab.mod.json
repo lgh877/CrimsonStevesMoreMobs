@@ -1,0 +1,11 @@
+{
+  "_fv": 39,
+  "_type": "tab",
+  "definition": {
+    "name": "Monsters Tab",
+    "icon": {
+      "value": "Blocks.SKULL#2"
+    },
+    "showSearch": false
+  }
+}

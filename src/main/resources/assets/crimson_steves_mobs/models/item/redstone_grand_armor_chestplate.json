@@ -1,0 +1,7 @@
+{
+  "parent": "crimson_steves_mobs:custom/redstone_grandarmor_chestplate",
+  "textures": {
+    "0": "crimson_steves_mobs:blocks/redstone_grandarmor",
+    "particle": "minecraft:block/redstone_ore"
+  }
+}

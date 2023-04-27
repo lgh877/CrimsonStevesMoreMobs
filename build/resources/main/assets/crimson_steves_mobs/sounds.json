@@ -1,0 +1,534 @@
+{
+  "endersent_hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:endersent_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "endersent_death": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:endersent_death",
+        "stream": false
+      }
+    ]
+  },
+  "endersent_idle": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:endersent_idle",
+        "stream": false
+      }
+    ]
+  },
+  "endersent_step": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:endersent_step",
+        "stream": false
+      }
+    ]
+  },
+  "robot_idle": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:robot_idle1",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:robot_idle2",
+        "stream": false
+      }
+    ]
+  },
+  "rock_smash": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:rock_smash1",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:rock_smash2",
+        "stream": false
+      }
+    ]
+  },
+  "rock_match": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:rock_match1",
+        "stream": false
+      }
+    ]
+  },
+  "creesteve_hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:creesteve_hurt1",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:creesteve_hurt2",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:creesteve_hurt3",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:creesteve_hurt4",
+        "stream": false
+      }
+    ]
+  },
+  "creesteve_death": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:creesteve_death",
+        "stream": false
+      }
+    ]
+  },
+  "neutral_steve_hurt": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:steve_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "monstrosity_hurt": {
+    "category": "hostile",
+    "subtitle": "subtitles.monstrosity_hurt",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityhurt-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityhurt-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityhurt-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityhurt-004_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "monstrosity_death": {
+    "category": "hostile",
+    "subtitle": "subtitles.monstrosity_death",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrositydeath-001_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "monstrosity_idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.monstrosity_idle",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityidle-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityidle-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityidle-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityidle-004_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityidle-005_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityidle-006_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityidle-007_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "monstrosity_shoot": {
+    "category": "hostile",
+    "subtitle": "subtitles.monstrosity_shoot",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityshoot-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityshoot-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityshoot-003_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "monstrosity_step": {
+    "category": "hostile",
+    "subtitle": "subtitles.monstrosity_step",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrositystep-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrositystep-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrositystep-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrositystep-004_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "jeb_nooooo": {
+    "category": "hostile",
+    "subtitle": "subtitles.jeb_nooooo",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:jeb-nooo",
+        "stream": false
+      }
+    ]
+  },
+  "monstrosity_awaken": {
+    "category": "hostile",
+    "subtitle": "subtitles.monstrosity_awaken",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityawaken-001_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "monstrosity_arm_move": {
+    "category": "hostile",
+    "subtitle": "subtitles.monstrosity_arm_move",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityarm-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrosityarm-002_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "monstrosity_growl": {
+    "category": "hostile",
+    "subtitle": "subtitles.monstrosity_growl",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_rsmonstrositygrowl-001_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_idle",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemidleheavy-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemidleheavy-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemidleheavy-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemidleheavy-004_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemidleheavy-005_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_hit": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_hit",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhurt-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhurt-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhurt-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhurt-004_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhurt-005_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhurt-006_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhurt-007_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhurt-008_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_growl": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_growl",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemgrowl-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemgrowl-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemgrowl-003_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_step": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_step",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepheavy-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepheavy-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepheavy-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepheavy-004_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepheavy-005_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_death": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_death",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_redstonegolemdeath-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_redstonegolemdeath-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_redstonegolemdeath-003_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_heavy_death": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_heavy_death",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemdeathheavy-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemdeathheavy-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemdeathheavy-003_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_run": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_run",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepshort-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepshort-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepshort-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepshort-004_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemstepshort-005_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_electric_spark": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_electric_spark",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemelectricsparks-001",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemelectricsparks-002",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemelectricsparks-003",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemelectricsparks-004",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemelectricsparks-005",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_electric_pulse": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_electric_pulse",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemelectricpulses-001",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemelectricpulses-002",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemelectricpulses-003",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_eye_sparkle": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_eye_sparkle",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemeyesparkle-001_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_hard_electric_spark": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_hard_electric_spark",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhardspark-001",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhardspark-002",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhardspark-003",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhardspark-004",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhardspark-005",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhardspark-006",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolemhardspark-007",
+        "stream": false
+      }
+    ]
+  },
+  "redstonegolem_prepare_attack": {
+    "category": "hostile",
+    "subtitle": "subtitles.redstonegolem_prepare_attack",
+    "sounds": [
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolempreattack-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "crimson_steves_mobs:sfx_mob_redstonegolempreattack-002_soundwave",
+        "stream": false
+      }
+    ]
+  }
+}

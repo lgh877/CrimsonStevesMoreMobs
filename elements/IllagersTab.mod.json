@@ -1,0 +1,11 @@
+{
+  "_fv": 39,
+  "_type": "tab",
+  "definition": {
+    "name": "Illagers Tab",
+    "icon": {
+      "value": "Items.CROSSBOW"
+    },
+    "showSearch": false
+  }
+}

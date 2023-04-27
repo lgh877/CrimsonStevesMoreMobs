@@ -1,0 +1,39 @@
+
+[Settings]
+	#Should certain mobs (mainly Illagers) zombify upon being killed by an undead?
+	#Default = true
+	toggle_zombieInfection = true
+	#Should undead mobs and Illagers actively fight each other upon sight?
+	#Default = true
+	toggle_undeadVsIllagers = true
+
+	[Settings."Raider spawns"]
+		#How many Crude Redstone Golem each wave
+		#Requires game restart
+		#Must have no more and no less than 8 integers
+		crude_redstone_golem_raidcount = [0, 0, 0, 0, 0, 1, 0, 3]
+		#How many Crude Redstone Monstrosity each wave
+		#Requires game restart
+		#Must have no more and no less than 8 integers
+		crude_redstone_monstrosity_raidcount = [0, 0, 0, 0, 0, 1, 0, 0]
+		#How many Cyborg Vindicator each wave
+		#Requires game restart
+		#Must have no more and no less than 8 integers
+		cyborg_vindicator_raidcount = [0, 1, 1, 1, 1, 1, 1, 0]
+		#How many Phantom Tamer each wave
+		#Requires game restart
+		#Must have no more and no less than 8 integers
+		phantom_tamer_raidcount = [0, 0, 0, 0, 0, 0, 0, 0]
+		#How many T-Rabus each wave
+		#Requires game restart
+		#Must have no more and no less than 8 integers
+		t_rabus_raidcount = [0, 0, 0, 0, 1, 0, 1, 0]
+		#How many Redstone Monstrosity each wave
+		#Requires game restart
+		#Must have no more and no less than 8 integers
+		redstone_monstrosity_raidcount = [0, 0, 0, 0, 0, 0, 1, 0]
+		#How many Minion Redstone Golem each wave
+		#Requires game restart
+		#Must have no more and no less than 8 integers
+		minion_redstone_golem_raidcount = [0, 2, 3, 4, 5, 6, 6, 6]
+
