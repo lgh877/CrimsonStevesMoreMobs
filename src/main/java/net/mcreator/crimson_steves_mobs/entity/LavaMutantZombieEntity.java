@@ -179,7 +179,19 @@ public class LavaMutantZombieEntity extends Monster implements IMutantZombie {
 	protected void registerGoals() {
 		registerAttackGoals();
 		this.goalSelector.addGoal(1, new FloatGoal(this));
-		this.goalSelector.addGoal(4, new MoveTowardsTargetGoal(this, 1.0D, 64.0F));
+		this.goalSelector.addGoal(4, new MoveTowardsTargetGoal(this, 1.0D, 64.0F) {
+			int resetTime;
+
+			public boolean canContinueToUse() {
+				resetTime--;
+				return super.canContinueToUse() && resetTime > 0;
+			}
+
+			public void start() {
+				super.start();
+				resetTime = 20 + (int) (Math.random() * 40);
+			}
+		});
 		this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
 		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new MoveThroughVillageGoal(this, 1.0D, true, 4, this::trueReturn));
@@ -288,7 +300,7 @@ public class LavaMutantZombieEntity extends Monster implements IMutantZombie {
 		}
 
 		public void stop() {
-			cooltime = 20 + (int) (Math.random() * 40);
+			cooltime = 20 + (int) (Math.random() * 20);
 		}
 	}
 
