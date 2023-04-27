@@ -839,7 +839,8 @@
       "sortid": 98,
       "compiles": true,
       "locked_code": true,
-      "registry_name": "custom_render_types"
+      "registry_name": "custom_render_types",
+      "path": "~/customRenderers"
     },
     {
       "name": "SlowRotMoveControl",
@@ -874,7 +875,8 @@
       "sortid": 102,
       "compiles": true,
       "locked_code": true,
-      "registry_name": "custom_flying_move_control"
+      "registry_name": "custom_flying_move_control",
+      "path": "~/Animations"
     },
     {
       "name": "FlyingChicken",
@@ -1079,7 +1081,7 @@
       "name": "LavaMutantZombie",
       "type": "livingentity",
       "sortid": 121,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "lava_mutant_zombie",
       "path": "~/mobs/mutants/zombies"
@@ -1111,7 +1113,22 @@
         "files": [
           "src/main/java/net/mcreator/crimson_steves_mobs/IMutantZombie.java"
         ]
-      }
+      },
+      "path": "~/interfaces"
+    },
+    {
+      "name": "LockAngleGoal",
+      "type": "code",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lock_angle_goal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/crimson_steves_mobs/LockAngleGoal.java"
+        ]
+      },
+      "path": "~/goals"
     }
   ],
   "variable_elements": [],
@@ -1438,21 +1455,21 @@
       "gamerule.shouldSpawnAdditionalPatrols.description": "If true, there will be additional mobs in pillager patrols.",
       "item.crimson_steves_mobs.zombie_pillager_spawn_egg": "Zombie Pillager Spawn Egg",
       "item.crimson_steves_mobs.minion_redstone_golem_spawn_egg": "Crude Minion Redstone Golem Spawn Egg",
-      "item.crimson_steves_mobs.ravager_enderman_spawn_egg": "Ravager Enderman Spawn Egg",
       "subtitles.rock_match": "",
+      "item.crimson_steves_mobs.ravager_enderman_spawn_egg": "Ravager Enderman Spawn Egg",
       "subtitles.creesteve_death": "",
-      "subtitles.neutral_steve_hurt": "",
-      "item.crimson_steves_mobs.phantom_tamer_spawn_egg": "Phantom Tamer Spawn Egg",
       "entity.crimson_steves_mobs.flying_chicken": "Flying Chicken",
+      "item.crimson_steves_mobs.phantom_tamer_spawn_egg": "Phantom Tamer Spawn Egg",
+      "subtitles.neutral_steve_hurt": "",
       "subtitles.monstrosity_hurt": "",
       "item.crimson_steves_mobs.creepig_spawn_egg": "Creepig Spawn Egg",
       "item.crimson_steves_mobs.insomnia_lump": "Insomnia Lump",
       "subtitles.monstrosity_idle": "",
       "subtitles.redstonegolem_electric_spark": "electric_spark",
-      "entity.crimson_steves_mobs.crude_redstone_golem": "Crude Redstone Golem",
       "subtitles.redstonegolem_run": "redstonegolem_run",
-      "item.crimson_steves_mobs.ender_ravager_spawn_egg": "Ender Ravager Spawn Egg",
+      "entity.crimson_steves_mobs.crude_redstone_golem": "Crude Redstone Golem",
       "item.crimson_steves_mobs.explosive_phantom_spawn_egg": "Explosive Phantom Spawn Egg",
+      "item.crimson_steves_mobs.ender_ravager_spawn_egg": "Ender Ravager Spawn Egg",
       "item.crimson_steves_mobs.giant_illager_spawn_egg": "Giant Illager Spawn Egg",
       "subtitles.redstonegolem_hit": "",
       "entity.crimson_steves_mobs.chad_creeper_golem": "Chad Creeper Golem",
@@ -1569,21 +1586,21 @@
       "gamerule.shouldSpawnAdditionalPatrols.description": "If true, there will be additional mobs in pillager patrols.",
       "item.crimson_steves_mobs.zombie_pillager_spawn_egg": "Zombie Pillager Spawn Egg",
       "item.crimson_steves_mobs.minion_redstone_golem_spawn_egg": "Crude Minion Redstone Golem Spawn Egg",
-      "subtitles.rock_match": "",
       "item.crimson_steves_mobs.ravager_enderman_spawn_egg": "Ravager Enderman Spawn Egg",
+      "subtitles.rock_match": "",
       "subtitles.creesteve_death": "",
-      "entity.crimson_steves_mobs.flying_chicken": "Flying Chicken",
-      "item.crimson_steves_mobs.phantom_tamer_spawn_egg": "Phantom Tamer Spawn Egg",
       "subtitles.neutral_steve_hurt": "",
+      "item.crimson_steves_mobs.phantom_tamer_spawn_egg": "Phantom Tamer Spawn Egg",
+      "entity.crimson_steves_mobs.flying_chicken": "Flying Chicken",
       "subtitles.monstrosity_hurt": "monstrosity_hurt",
       "item.crimson_steves_mobs.creepig_spawn_egg": "Creepig Spawn Egg",
       "item.crimson_steves_mobs.insomnia_lump": "Insomnia Lump",
       "subtitles.monstrosity_idle": "monstrosity_idle",
       "subtitles.redstonegolem_electric_spark": "electric_spark",
-      "subtitles.redstonegolem_run": "redstonegolem_run",
       "entity.crimson_steves_mobs.crude_redstone_golem": "Crude Redstone Golem",
-      "item.crimson_steves_mobs.explosive_phantom_spawn_egg": "Explosive Phantom Spawn Egg",
+      "subtitles.redstonegolem_run": "redstonegolem_run",
       "item.crimson_steves_mobs.ender_ravager_spawn_egg": "Ender Ravager Spawn Egg",
+      "item.crimson_steves_mobs.explosive_phantom_spawn_egg": "Explosive Phantom Spawn Egg",
       "item.crimson_steves_mobs.giant_illager_spawn_egg": "Giant Illager Spawn Egg",
       "subtitles.redstonegolem_hit": "redstonegolem_hit",
       "entity.crimson_steves_mobs.chad_creeper_golem": "Chad Creeper Golem",
