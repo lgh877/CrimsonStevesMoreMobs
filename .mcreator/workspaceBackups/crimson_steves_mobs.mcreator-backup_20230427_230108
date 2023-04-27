@@ -839,7 +839,8 @@
       "sortid": 98,
       "compiles": true,
       "locked_code": true,
-      "registry_name": "custom_render_types"
+      "registry_name": "custom_render_types",
+      "path": "~/customRenderers"
     },
     {
       "name": "SlowRotMoveControl",
@@ -874,7 +875,8 @@
       "sortid": 102,
       "compiles": true,
       "locked_code": true,
-      "registry_name": "custom_flying_move_control"
+      "registry_name": "custom_flying_move_control",
+      "path": "~/Animations"
     },
     {
       "name": "FlyingChicken",
@@ -1079,7 +1081,7 @@
       "name": "LavaMutantZombie",
       "type": "livingentity",
       "sortid": 121,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "lava_mutant_zombie",
       "path": "~/mobs/mutants/zombies"
@@ -1111,7 +1113,22 @@
         "files": [
           "src/main/java/net/mcreator/crimson_steves_mobs/IMutantZombie.java"
         ]
-      }
+      },
+      "path": "~/interfaces"
+    },
+    {
+      "name": "LockAngleGoal",
+      "type": "code",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lock_angle_goal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/crimson_steves_mobs/LockAngleGoal.java"
+        ]
+      },
+      "path": "~/goals"
     }
   ],
   "variable_elements": [],
