@@ -40,6 +40,10 @@ public class LavaWaveEntity extends ThrowableItemProjectile {
 	public short shockSpeed = 5;
 	public short yaw = 0;
 	private Vec3 lookVec = this.getLookAngle();
+	public float xDir = 0;
+	public float zDir = 0;
+	public float initialXDir = 0;
+	public float initialZDir = 0;
 
 	/*
 	protected void defineSynchedData() {
@@ -78,6 +82,10 @@ public class LavaWaveEntity extends ThrowableItemProjectile {
 		p_32304_.putShort("shockSpeed", this.shockSpeed);
 		p_32304_.putShort("yaw", this.yaw);
 		p_32304_.putFloat("damage", this.damage);
+		p_32304_.putFloat("xDir", this.xDir);
+		p_32304_.putFloat("zDir", this.zDir);
+		p_32304_.putFloat("initialXDir", this.initialXDir);
+		p_32304_.putFloat("initialZDir", this.initialZDir);
 		p_32304_.putFloat("size", this.entityData.get(SIZE));
 	}
 
@@ -88,6 +96,10 @@ public class LavaWaveEntity extends ThrowableItemProjectile {
 		this.shockSpeed = p_32296_.getShort("shockSpeed");
 		this.yaw = p_32296_.getShort("yaw");
 		this.damage = p_32296_.getFloat("damage");
+		this.xDir = p_32296_.getFloat("xDir");
+		this.zDir = p_32296_.getFloat("zDir");
+		this.initialXDir = p_32296_.getFloat("initialXDir");
+		this.initialZDir = p_32296_.getFloat("initialZDir");
 		this.entityData.set(SIZE, p_32296_.getFloat("size"));
 		this.lookVec = this.calculateViewVector(0, this.yaw);
 	}
@@ -135,16 +147,19 @@ public class LavaWaveEntity extends ThrowableItemProjectile {
 				this.playSound(SoundEvents.BLAZE_SHOOT, 1, 0.5f);
 			}
 			for (int p = 0; p < 12 * Mth.clamp((int) Math.pow((double) this.entityData.get(SIZE), 1.5), 1, Integer.MAX_VALUE); p++)
-				this.level.addParticle(ParticleTypes.DRIPPING_LAVA, this.getX() + ((double) this.random.nextFloat() - 0.5D) * (double) this.entityData.get(SIZE), this.getY() + 0.3,
+				this.level.addParticle(ParticleTypes.DRIPPING_LAVA, this.getX() + ((double) this.random.nextFloat() - 0.5D) * (double) this.entityData.get(SIZE), this.getY() + 0.3 * Math.random(),
 						this.getZ() + ((double) this.random.nextFloat() - 0.5D) * (double) this.entityData.get(SIZE), 4.0D * ((double) this.random.nextFloat() - 0.5D), (double) this.random.nextFloat() * 16 + 0.7D,
 						((double) this.random.nextFloat() - 0.5D) * 4.0D);
-			for (int p = 0; p < Mth.clamp((int) Math.pow((double) this.entityData.get(SIZE), 1.5), 1, Integer.MAX_VALUE); p++)
+			for (int p = 0; p < 2 * Mth.clamp((int) Math.pow((double) this.entityData.get(SIZE), 1.5), 1, Integer.MAX_VALUE); p++)
 				this.level.addParticle(ParticleTypes.LAVA, this.getX() + ((double) this.random.nextFloat() - 0.5D) * (double) this.entityData.get(SIZE), this.getY() + 0.2,
 						this.getZ() + ((double) this.random.nextFloat() - 0.5D) * (double) this.entityData.get(SIZE), 4.0D * ((double) this.random.nextFloat() - 0.5D), 0, ((double) this.random.nextFloat() - 0.5D) * 4.0D);
 		}
 		if (!this.level.isClientSide)
 			if (this.tickCount % this.shockSpeed == 0) {
-				this.lookVec = this.calculateViewVector(0, this.yaw);
+				this.lookVec = new Vec3(initialXDir, 0, initialZDir).normalize();
+				Vec3 dirD = new Vec3(xDir - this.getX(), 0, zDir - this.getZ()).normalize();
+				initialXDir += dirD.x * 2;
+				initialZDir += dirD.z * 2;
 				//this.moveTo(this.getX() + this.getLookAngle().x * size / 2, this.getY(), this.getZ() + this.getLookAngle().z * size / 2);
 				BlockPos blockpos = this.getNextPosition();
 				boolean flag = false;
@@ -251,9 +266,10 @@ public class LavaWaveEntity extends ThrowableItemProjectile {
 		entityarrow.shockRange = (short) shockRange;
 		entityarrow.shockSpeed = (short) shockSpeed;
 		entityarrow.setSize(size);
-		//entityarrow.size = size;
 		entityarrow.damage = damage;
 		entityarrow.yaw = (short) yaw;
+		entityarrow.initialXDir = (float) entityarrow.calculateViewVector(0, entityarrow.yaw).x;
+		entityarrow.initialZDir = (float) entityarrow.calculateViewVector(0, entityarrow.yaw).z;
 		//entityarrow.moveTo(vec3);
 		world.addFreshEntity(entityarrow);
 		return entityarrow;
@@ -267,6 +283,25 @@ public class LavaWaveEntity extends ThrowableItemProjectile {
 		entityarrow.setSize(size);
 		entityarrow.damage = damage;
 		entityarrow.yaw = (short) yaw;
+		entityarrow.initialXDir = (float) entityarrow.calculateViewVector(0, entityarrow.yaw).x;
+		entityarrow.initialZDir = (float) entityarrow.calculateViewVector(0, entityarrow.yaw).z;
+		//entityarrow.moveTo(vec3);
+		world.addFreshEntity(entityarrow);
+		return entityarrow;
+	}
+
+	public static LavaWaveEntity shoot(Level world, LivingEntity entity, float damage, float size, int shockRange, int shockSpeed, float yaw, Vec3 vec3, float xDir, float zDir) {
+		LavaWaveEntity entityarrow = new LavaWaveEntity(world, entity);
+		entityarrow.moveTo(vec3);
+		entityarrow.shockRange = (short) shockRange;
+		entityarrow.shockSpeed = (short) shockSpeed;
+		entityarrow.setSize(size);
+		entityarrow.damage = damage;
+		entityarrow.yaw = (short) yaw;
+		entityarrow.initialXDir = (float) entityarrow.calculateViewVector(0, entityarrow.yaw).x;
+		entityarrow.initialZDir = (float) entityarrow.calculateViewVector(0, entityarrow.yaw).z;
+		entityarrow.xDir = xDir;
+		entityarrow.zDir = zDir;
 		//entityarrow.moveTo(vec3);
 		world.addFreshEntity(entityarrow);
 		return entityarrow;

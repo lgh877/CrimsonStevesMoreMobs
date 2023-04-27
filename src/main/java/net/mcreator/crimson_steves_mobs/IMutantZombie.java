@@ -18,4 +18,8 @@ public interface IMutantZombie {
 	public boolean isSlamming();
 
 	public boolean isShouting();
+
+	public float getSlamAnim(float input);
+
+	public float getShoutAnim(float input);
 }

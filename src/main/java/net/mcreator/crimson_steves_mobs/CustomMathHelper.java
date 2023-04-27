@@ -55,4 +55,13 @@ public class CustomMathHelper {
 		*/
 		return caster.getBoundingBox().inflate(sizeup).intersects(entityIn.getBoundingBox());
 	}
+
+	public static boolean isEntityInBox(LivingEntity entityIn, LivingEntity caster, AABB aabb) {
+		/*
+		if (caster.getBoundingBox().inflate(sizeup).contains(entityIn.position())) {
+			return true;
+		}
+		*/
+		return aabb.intersects(entityIn.getBoundingBox());
+	}
 }

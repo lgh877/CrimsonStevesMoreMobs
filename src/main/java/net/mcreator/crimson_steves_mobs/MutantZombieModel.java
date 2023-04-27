@@ -41,7 +41,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.google.common.collect.ImmutableList;
 
 @OnlyIn(Dist.CLIENT)
-public class MutantZombieModel<T extends LivingEntity> extends HierarchicalModel<T> implements ArmedModel {
+public class MutantZombieModel<T extends LivingEntity & IMutantZombie> extends HierarchicalModel<T> implements ArmedModel {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(CrimsonStevesMobsMod.MODID, "mutant_zombie_model"), "main");
 	protected final ModelPart root;
 	protected final ModelPart whole;
@@ -147,10 +147,14 @@ public class MutantZombieModel<T extends LivingEntity> extends HierarchicalModel
 	public void prepareMobModel(T e, float f, float f1, float f2) {
 		super.prepareMobModel(e, f, f1, f2);
 		partialTicks = f2;
+		slam = e.getSlamAnim(f2);
+		shout = e.getShoutAnim(f2);
 	}
 
 	protected float pitch;
 	protected float headYaw;
+	protected float slam;
+	protected float shout;
 
 	@Override
 	public void setupAnim(T e, float f, float f1, float f2, float f3, float f4) {
@@ -167,6 +171,53 @@ public class MutantZombieModel<T extends LivingEntity> extends HierarchicalModel
 		this.rightShoulder.xRot += -Mth.sin(f * 0.6f) * f1;
 		this.leftThigh.xRot += -Mth.sin(f * 0.6f) * f1;
 		this.rightThigh.xRot += Mth.sin(f * 0.6f) * f1;
+		if (slam > 0) {
+			if (slam < 0.25f) {
+				float a = slam * 4;
+				a = 1 - a * a;
+				leftShoulder.xRot *= a;
+				rightShoulder.xRot *= a;
+				leftShoulder.xRot += -(1 - a) * 3;
+				rightShoulder.xRot += -(1 - a) * 3;
+				upperBody.xRot += -(1 - a) / 2;
+				lowerBody.xRot += -(1 - a) / 2;
+			} else if (slam < 0.5f) {
+				float a = (slam - 0.25f) * 4;
+				a = a * a * a;
+				leftShoulder.xRot *= 0;
+				rightShoulder.xRot *= 0;
+				leftShoulder.xRot += -3 + a * 0.5f;
+				rightShoulder.xRot += -3 + a * 0.5f;
+				upperBody.xRot += -0.5f + a * 1.2f;
+				lowerBody.xRot += -0.5f + a * 1.2f;
+			} else if (slam < 0.75f) {
+				float a = (slam - 0.5f) * 4;
+				a = 1 - a * a * a;
+				leftShoulder.xRot *= 0;
+				rightShoulder.xRot *= 0;
+				leftShoulder.xRot += -2.5f;
+				rightShoulder.xRot += -2.5f;
+				leftShoulder.y += (float) (0.5 - Math.random()) * a * 3;
+				leftShoulder.z += (float) (0.5 - Math.random()) * a * 3;
+				rightShoulder.y += (float) (0.5 - Math.random()) * a * 3;
+				rightShoulder.z += (float) (0.5 - Math.random()) * a * 3;
+				upperBody.xRot += 0.7f;
+				upperBody.y += (float) (0.5 - Math.random()) * a;
+				upperBody.z += (float) (0.5 - Math.random()) * a;
+				lowerBody.xRot += 0.7f;
+				lowerBody.y += (float) (0.5 - Math.random()) * a;
+				lowerBody.z += (float) (0.5 - Math.random()) * a;
+			} else {
+				float a = (slam - 0.75f) * 4;
+				a = a * a;
+				leftShoulder.xRot *= a;
+				rightShoulder.xRot *= a;
+				leftShoulder.xRot += (-1 + a) * 2.5f;
+				rightShoulder.xRot += (-1 + a) * 2.5f;
+				upperBody.xRot += (1 - a) * 0.7f;
+				lowerBody.xRot += (1 - a) * 0.7f;
+			}
+		}
 		//setupAnim2(e, f, f1, f2, f3, f4);
 	}
 
